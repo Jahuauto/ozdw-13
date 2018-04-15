@@ -10,6 +10,8 @@ class BooksController
     {
         $model = new Books();
         $data = $model->getList();
+        echo "<pre>";
+        print_r($data);
         return new Response($page . ' --- ' . $test);
     }
 }

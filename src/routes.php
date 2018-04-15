@@ -2,13 +2,11 @@
 
 use Symfony\Component\Routing;
 
-$routes = new Routing\RouteCollection;
+$routes = new Routing\RouteCollection();
 
-$routes->add('home', new Routing\Route('/books/{page}/{test}', array(
+$routes->add('books', new Routing\Route('/books/{page}/{test}', array(
     'page' => 1,
-    'name' => 'janek',
+    'test' => 'janek',
     '_controller' => 'Books\\Controller\\BooksController::indexAction'
 )));
-
-
 return $routes;

@@ -29,8 +29,9 @@ class Framework
 
             $controller = $this->resolver->getController($request);
 
-
             $arguments = $this->resolver->getArguments($request, $controller);
+
+
 
             return call_user_func_array($controller, $arguments);
         } catch (ResourceNotFoundException $e) {
